@@ -1,0 +1,132 @@
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navItem {
+    color: black;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 1rem;
+    border-radius: 1.95rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    background: #00CC71;
+    border: 10px solid #00AB5E;
+    border-top: 13px solid #00AB5E;
+    height: 2rem;
+
+;
+}
+
+.navItem:hover {
+    background-color: #ffffff1f;
+}
+
+.navItem.active {
+    background-color: #ffffff1f;
+}
+
+.navItem a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.hero {
+    text-align: center;
+    background: #FFFFFFD9;
+    position: absolute;
+    width: 100%;
+}
+.hero h1 {
+    font-weight: 500;
+}
+
+.hero p {
+    font-weight: 200;
+}
+
+.icon {
+    width: 93%;
+}
+.main {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding-top: 2.5rem;
+    display: grid;
+    place-items: center;
+
+}
+
+.badges {
+    padding: 0;
+    margin: 0;
+    margin-top: 1.95rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    color: #000;
+}
+
+.badge {
+    display: inline-block;
+    height: 10rem;
+    width: 10rem;
+    background: #A5F2C4;
+    font-family: 'Varela Round', sans-serif;
+    color: #000;
+    border-radius: 1.95rem;
+    font-size: 0.5rem;
+    font-weight: 200;
+    margin: 0.5rem;
+}
+
+.badgeInner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 10rem;
+    width: 100%;
+}
+.badge img {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+
+}
+
+.badge h3 {
+    padding: 0.25rem;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 200;
+    color: #334433;
+
+}

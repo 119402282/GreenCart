@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id        Int           @id @default(autoincrement())
+  createdAt DateTime      @default(now())
+  email     String        @unique
+  name      String?
+  password  String
+  prefferdOffset  offsetType @default(tree)
+  offsets   CarbonOrder[]
+}
+
+model CarbonOrder {
+  id             Int               @id @default(autoincrement())
+  createdAt      DateTime          @default(now())
+  offsetPrice    Int
+  offsetType     offsetType
+  offsetCarbonKg BigInt
+  customer       Customer?         @relation(fields: [customerId], references: [id])
+  customerId     Int?
+  listItems      CarbonOrderItem[]
+}
+
+model CarbonOrderItem {
+  id             Int          @id @default(autoincrement())
+  productType    String
+  offsetCost     Int
+  offsetCarbonKg BigInt
+  quantity       Int
+  carbonOrder    CarbonOrder? @relation(fields: [carbonOrderId], references: [id])
+  carbonOrderId  Int?
+}
+
+model Product {
+  id             Int      @id @default(autoincrement())
+  productName    String
+  productType    String
+  offsetCarbonKg BigInt
+  company        Company? @relation(fields: [companyId], references: [id])
+  companyId      Int?
+}
+
+model Company {
+  id             Int       @id @default(autoincrement())
+  companyName    String
+  prefferdOffset    offsetType @default(tree)
+  apiKeyGuarded  String
+  offsetCarbonKg BigInt
+  products       Product[]
+}
+
+enum offsetType {
+  tree
+  wind
+  solar
+  methaneDestruction
+  carbonSequestration
+}

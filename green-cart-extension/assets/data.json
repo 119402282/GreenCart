@@ -1,0 +1,52 @@
+{
+  "userId": null,
+  "name": null,
+  "token": null,
+  "stats": [
+    {
+      "name": "tree",
+      "emissions": {
+        "CO2": 0.1,
+        "price": 0.2,
+        "text": "Trees",
+        "value": 0
+      }
+    },
+    {
+      "name": "solar",
+      "emissions": {
+        "CO2": 0.1,
+        "price": 0.2,
+        "text": "kWh Solar",
+        "value": 12324
+      }
+    },
+    {
+      "name": "wind",
+      "emissions": {
+        "CO2": 0.1,
+        "price": 0.2,
+        "text": "kWh Wind",
+        "value": 12324
+      }
+    },
+    {
+      "name": "methane",
+      "emissions": {
+        "CO2": 0.1,
+        "price": 0.2,
+        "text": "Kgs Methane",
+        "value": 12324
+      }
+    },
+    {
+      "name": "carbon",
+      "emissions": {
+        "CO2": 0.1,
+        "price": 0.2,
+        "text": "Kgs Carbon",
+        "value": 12324
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+green-cart-extension/node_modules
+green-cart/node_modules
+green-cart-extension/.plasmo
+green-cart-extension/.hintrc
+green-cart-extension/.prettierrc.cjs
+green-cart-extension/build
+green-cart-extension/.vscode
